@@ -5,4 +5,6 @@ import ReactDOM from "react-dom";
 
 import Preview from "./Preview";
 
-ReactDOM.render(<Preview />, document.getElementById("index"));
+import {state, markup, style, events} from "./data";
+
+ReactDOM.render(<Preview markup={markup} style={style} events={events} state={state}/>, document.getElementById("index"));
