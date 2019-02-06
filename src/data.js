@@ -1,4 +1,4 @@
-let markup = "<input type='text' value={name}/>";
+let markup = "<input type='text' value='podu pattasu'/>";
 
 let state = {
     name: ""
