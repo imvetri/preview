@@ -2,7 +2,7 @@
   "name": "state-reducer-viewer",
   "version": "4.0.0",
   "description": "Create/edit/delete states using reducer functions",
-  "main": "src/Preview.js",
+  "main": "src/Preview/Preview.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --config webpack.development.config",
     "build": "webpack --mode production --config webpack.development.config",
@@ -20,7 +20,6 @@
   "homepage": "https://github.com/imvetri/state-reducer-viewer#readme",
   "dependencies": {
     "react": "^16.7.0",
-    "react-codemirror": "^1.0.0",
     "react-dom": "^16.7.0",
     "react-inspector": "^2.3.1",
     "react-switch": "^3.0.4"
