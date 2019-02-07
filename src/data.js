@@ -1,21 +1,20 @@
 import style from "./Preview/Preview.css";
 
-let markup = "<input type='text' className={style.box} value={state.name}/>";
+
+let markup = `<input type='text' className={style.box} value={state.name} {...event}/>`;
 
 let state = {
     name: "lalalsdfa"
 };
 
-let events = {
-    onClick: 
-`
-state.name="vetri"
-`
-};
+let event = {
+        onClick: function a(){console.log('Clicked')},
+        onFocus: function a(){console.log("Focussed")}
+    };
 
 export {
     markup,
     state,
-    events,
+    event,
     style
 }
