@@ -1,9 +1,9 @@
 import style from "./Preview/Preview.css";
 
-let markup = "<input type='text' className={style.box} value='podu pattasu'/>";
+let markup = "<input type='text' className={style.box} value={state.name}/>";
 
 let state = {
-    name: ""
+    name: "lalalsdfa"
 };
 
 let events = {

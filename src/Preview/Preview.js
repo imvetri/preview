@@ -14,8 +14,8 @@ class Preview extends Component {
     }
 
     render() {
-        let newElement = transform(this.props.markup, style);
-        
+        let newElement = transform(this.props.markup, this.props.style, this.props.state);
+
         return (
             <div className={style.box}>
                 dei
