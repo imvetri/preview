@@ -3,7 +3,9 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-import {transform} from "./jsxTranspiler";
+import {transform} from "../jsxTranspiler";
+
+import style from "./Preview.css";
 
 class Preview extends Component {
     constructor(props) {
@@ -12,10 +14,10 @@ class Preview extends Component {
     }
 
     render() {
-        let newElement= transform(this.props.markup);
+        let newElement = transform(this.props.markup, style);
         
         return (
-            <div>
+            <div className={style.box}>
                 dei
                 {newElement}
             </div>
