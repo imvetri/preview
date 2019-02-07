@@ -2,7 +2,7 @@ const babel = require("@babel/standalone");
 import React from "react";
 
 
-export function transform(jsx) {
+export function transform(jsx, style) {
     let result;
     try{
         // Babel will create new local variable, so try running assuming React will be available.

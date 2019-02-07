@@ -1,4 +1,6 @@
-let markup = "<input type='text' value='podu pattasu'/>";
+import style from "./Preview/Preview.css";
+
+let markup = "<input type='text' className={style.box} value='podu pattasu'/>";
 
 let state = {
     name: ""
@@ -10,8 +12,6 @@ let events = {
 state.name="vetri"
 `
 };
-
-let style="";
 
 export {
     markup,
