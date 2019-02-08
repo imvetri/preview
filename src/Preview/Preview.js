@@ -3,9 +3,10 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-import {transform} from "../jsxTranspiler";
 
 import style from "./Preview.css";
+
+import DynamicComponent from "../DynamicComponent/DynamicComponent";
 
 class Preview extends Component {
     constructor(props) {
@@ -14,12 +15,9 @@ class Preview extends Component {
     }
 
     render() {
-        let newElement = transform(this.props.markup, this.props.style, this.props.state, this.props.event);
-
         return (
             <div className={style.box}>
-                dei
-                {newElement}
+                <DynamicComponent markup={this.props.markup} style={this.props.style} events={this.props.events} state={this.props.state}/>
             </div>
         );
     }
