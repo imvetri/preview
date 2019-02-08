@@ -8,8 +8,18 @@ let state = {
 };
 
 let events = {
-        onClick: function a(e){console.log(e)},
-        onFocus: function a(){console.log("FOSSED_EVENT", this)}
+        onClick: function a(e){
+            this.setState({
+                name: e.target.value
+            })
+            console.log(e)
+        },
+        onFocus: function a(){
+            console.log("FOSSED_EVENT");
+            this.setState({
+                name:"Vetri"
+            })
+        }
     };
 
 export {
