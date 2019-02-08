@@ -19,12 +19,11 @@ class DynamicComponent extends Component {
             this[functionName] = this.props.events[event].bind(this);
             // Also replace in the original events object.
             this.props.events[event] = this[functionName];
-        })
+        });
     }
 
     render() {
-        let newElement = transform(this.props.markup, this.props.style, this.props.state, this.props.events);
-
+        let newElement = transform(this.props.markup, this.props.style, this.state, this.props.events);
         return (
             <div className={style.box}>
                 dei
