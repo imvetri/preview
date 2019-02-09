@@ -15,6 +15,7 @@ class DynamicComponent extends Component {
         this.markup = component.markup;
         this.events = component.events;
         this.style = component.style;
+        this.children = component.children;
         
         Object.keys(this.events).forEach(event=>{
             // Get the function name.
@@ -32,6 +33,7 @@ class DynamicComponent extends Component {
             <div className={style.box}>
                 dei
                 {newElement}
+                {this.children.map(component=><DynamicComponent component={component}/>)}
             </div>
         );
     }

@@ -1,7 +1,7 @@
 import style from "../Preview/Preview.css";
 
 
-let markup = `<label className={style.box}/>{state.name}}</label>`;
+let markup = `<label className={style.box}>{state.name}</label>`;
 
 let state = {
     name: "label component"
@@ -10,6 +10,7 @@ let state = {
 let LabelComponent = {
     markup: markup,
     state: state,
+    style: style,
     events: {},
     children: []
 }
