@@ -17,18 +17,7 @@ class Preview extends Component {
     render() {
         return (
             <div className={style.box}>
-                <DynamicComponent 
-                    markup={this.props.markup} 
-                    style={this.props.style} 
-                    events={Object.assign({}, this.props.events)}
-                    state={Object.assign({}, this.props.state)}
-                    />
-                <DynamicComponent 
-                    markup={this.props.markup} 
-                    style={this.props.style} 
-                    events={Object.assign({}, this.props.events)}
-                    state={Object.assign({}, this.props.state)}
-                    />
+                {this.props.components.map(component=><DynamicComponent component={component}/>)}
             </div>
         );
     }
