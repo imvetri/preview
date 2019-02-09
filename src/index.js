@@ -9,7 +9,7 @@ import Preview from "./Preview/Preview";
 import InputComponent1 from "./mock/InputComponent1";
 import InputComponent2 from "./mock/InputComponent2";
 
-let Components = [InputComponent1, InputComponent1];
+let Components = [InputComponent1, InputComponent2];
 
 ReactDOM.render(<Preview 
                     components={Components}

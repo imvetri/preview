@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-import { transform } from "../jsxTranspiler";
+import { transpileJSX } from "../jsxTranspiler";
 
 import style from "../Preview/Preview.css";
 
@@ -27,7 +27,7 @@ class DynamicComponent extends Component {
     }
 
     render() {
-        let newElement = transform(this.markup, this.style, this.state, this.events);
+        let newElement = transpileJSX(this.markup, this.style, this.state, this.events);
         return (
             <div className={style.box}>
                 dei

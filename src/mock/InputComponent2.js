@@ -4,7 +4,7 @@ import style from "../Preview/Preview.css";
 let markup = `<input type='text' className={style.box} value={state.name} {...events}/>`;
 
 let state = {
-    name: "lalalsdfa"
+    name: "Second Component"
 };
 
 let events = {
@@ -25,7 +25,8 @@ let InputComponent2 = {
     markup: markup,
     state: state,
     events: events,
-    style: style
+    style: style,
+    children: []
 }
 
 export default InputComponent2;
