@@ -6,6 +6,11 @@ import ReactDOM from "react-dom";
 import Preview from "./Preview/Preview";
 
 
-import {state, markup, style, events} from "./data";
+import InputComponent1 from "./mock/InputComponent1";
+import InputComponent2 from "./mock/InputComponent2";
 
-ReactDOM.render(<Preview markup={markup} style={style} events={events} state={state}/>, document.getElementById("index"));
+let Components = [InputComponent1, InputComponent1];
+
+ReactDOM.render(<Preview 
+                    components={Components}
+                />, document.getElementById("index"));

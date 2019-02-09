@@ -10,20 +10,24 @@ import style from "../Preview/Preview.css";
 class DynamicComponent extends Component {
     constructor(props) {
         super(props);
-        this.state = this.props.state
+        let component = this.props.component;
+        this.state = component.state;
+        this.markup = component.markup;
+        this.events = component.events;
+        this.style = component.style;
         
-        Object.keys(this.props.events).forEach(event=>{
+        Object.keys(this.events).forEach(event=>{
             // Get the function name.
-            let functionName = this.props.events[event].name;
+            let functionName = this.events[event].name;
             // Bind it to current instance and save it.
-            this[functionName] = this.props.events[event].bind(this);
+            this[functionName] = this.events[event].bind(this);
             // Also replace in the original events object.
-            this.props.events[event] = this[functionName];
+            this.events[event] = this[functionName];
         });
     }
 
     render() {
-        let newElement = transform(this.props.markup, this.props.style, this.state, this.props.events);
+        let newElement = transform(this.markup, this.style, this.state, this.events);
         return (
             <div className={style.box}>
                 dei
