@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-import { transform } from "../jsxTranspiler";
+import { transpileJSX } from "../jsxTranspiler";
 
 import style from "../Preview/Preview.css";
 
@@ -15,6 +15,7 @@ class DynamicComponent extends Component {
         this.markup = component.markup;
         this.events = component.events;
         this.style = component.style;
+        this.children = component.children;
         
         Object.keys(this.events).forEach(event=>{
             // Get the function name.
@@ -27,11 +28,12 @@ class DynamicComponent extends Component {
     }
 
     render() {
-        let newElement = transform(this.markup, this.style, this.state, this.events);
+        let newElement = transpileJSX(this.markup, this.style, this.state, this.events);
         return (
             <div className={style.box}>
                 dei
                 {newElement}
+                {this.children.map(component=><DynamicComponent component={component}/>)}
             </div>
         );
     }

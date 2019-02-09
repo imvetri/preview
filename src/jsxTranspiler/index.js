@@ -2,7 +2,7 @@ const babel = require("@babel/standalone");
 import React from "react";
 
 
-export function transform(jsx, style, state, events) {
+export function transpileJSX(jsx, style, state, events) {
 
     let result;
     try{
