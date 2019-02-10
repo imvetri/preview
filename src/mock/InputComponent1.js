@@ -1,18 +1,17 @@
 import style from "../Preview/Preview.css";
 
 
-let markup = `<input type='text' className={style.box} value={state.name} {...events}/>`;
+let markup = `<input type='text' id="firstName" className={style.box} value={state.name} {...events}/>`;
 
 let state = {
     name: "First Component"
 };
 
 let events = {
-    onClick: function a(e) {
+    onClick: function a() {
         this.setState({
-            name: e.target.value
+            name: "Changed"
         })
-        console.log(e)
     },
     onFocus: function a() {
         console.log("FOCUSSED_EVENT");

@@ -1,23 +1,24 @@
 {
-  "name": "state-reducer-viewer",
+  "name": "preview",
   "version": "4.0.0",
   "description": "Create/edit/delete states using reducer functions",
   "main": "src/Preview/Preview.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --config webpack.development.config",
     "build": "webpack --mode production --config webpack.development.config",
-    "build:publish": "webpack --mode production --config webpack.npm.config"
+    "build:publish": "webpack --mode production --config webpack.npm.config",
+    "test": "testcafe chrome tests/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imvetri/state-reducer-viewer.git"
+    "url": "git+https://github.com/imvetri/preview.git"
   },
   "author": "Vetrivel, Shanmugam",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/imvetri/state-reducer-viewer/issues"
+    "url": "https://github.com/imvetri/previewissues"
   },
-  "homepage": "https://github.com/imvetri/state-reducer-viewer#readme",
+  "homepage": "https://github.com/imvetri/preview#readme",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -33,6 +34,7 @@
     "css-loader": "^2.0.2",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.1",
+    "testcafe": "^1.0.0",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"

@@ -1,7 +1,7 @@
 import style from "../Preview/Preview.css";
 import labelComponent from "./LabelComponent";
 
-let markup = `<input type='text' className={style.box} value={state.name} {...events}/>`;
+let markup = `<input type='text' id="secondInput" className={style.box} value={state.name} {...events}/>`;
 
 let state = {
     name: "Second Component"
