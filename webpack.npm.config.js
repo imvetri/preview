@@ -1,7 +1,7 @@
 module.exports = {
     devtool: 'inline-source-map',
     entry: {
-        entry: __dirname + '/dist/Preview.js'
+        entry: __dirname + '/src/Preview/Preview.js'
     },
     output: {
         filename: 'Preview.js'
