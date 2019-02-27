@@ -3,7 +3,10 @@ import React from "react";
 
 
 export function transpileJSX(jsx, style, state, events) {
-
+    var dynamicStyle = document.createElement('style');
+    dynamicStyle.type = 'text/css';
+    dynamicStyle.innerHTML = style;
+    document.body.appendChild(dynamicStyle)
     let result;
     try{
         // Babel will create new local variable, so try running assuming React will be available.
