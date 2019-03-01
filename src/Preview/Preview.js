@@ -19,7 +19,7 @@ class Preview extends Component {
             validate(this.props.components)
         }
         catch(e){
-
+            console.error(e);
         }
         return (
             <div className={style.box}>
