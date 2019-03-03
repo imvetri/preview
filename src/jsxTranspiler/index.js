@@ -1,7 +1,8 @@
 const babel = require("@babel/standalone");
 import React from "react";
 
-
+// IMPORTANT - Do not rename style,state,events. 
+// EXAMPLE - val replaces them at line#4 in inputComponent1.
 export function transpileJSX(jsx, style, state, events) {
     var dynamicStyle = document.createElement('style');
     dynamicStyle.type = 'text/css';
