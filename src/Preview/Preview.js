@@ -23,7 +23,7 @@ class Preview extends Component {
         }
         return (
             <div className={style.box}>
-                {this.props.components.map(component=><DynamicComponent component={component}/>)}
+                {this.props.components.map(component=><DynamicComponent key={component.id} component={component}/>)}
             </div>
         );
     }

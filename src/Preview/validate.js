@@ -1,11 +1,15 @@
 "use strict";
 
+const isFunction = (fun) => {
+    return typeof fun === "function";
+} 
+
 const validateEvents = (event) => {
     // Future
     // Has access to only state and event parameter.
     // Any valid javascript should work
-    return Object.keys(events).every(eventName=>{
-        typeof event[eventName] === "function";
+    return Object.keys(event).every(eventName=>{
+        return isFunction(event[eventName]);
     })
 }
 
