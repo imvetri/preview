@@ -11,7 +11,13 @@ class DynamicComponent extends Component {
     constructor(props) {
         super(props);
 
-        this.initialiseComponent(this.props.component);
+        let component = this.props.component;	
+        this.state = component.state;	        
+        this.markup = component.markup;	
+        this.events = component.events;	
+        this.style = component.style;	
+        this.children = component.children;	
+
         Object.keys(this.events).forEach(event=>{
             // Get the function name.
             let functionName = this.events[event].name;
@@ -22,16 +28,7 @@ class DynamicComponent extends Component {
         });
     }
 
-    initialiseComponent (component) {
-        this.state = component.state;
-        this.markup = component.markup;
-        this.events = component.events;
-        this.style = component.style;
-        this.children = component.children;
-    }
-
     render() {
-        this.initialiseComponent(this.props.component);
 
         let newElement = transpileJSX(this.markup, this.style, this.state, this.events);
         return (

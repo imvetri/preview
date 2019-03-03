@@ -4,7 +4,7 @@ const validateEvents = (event) => {
     // Future
     // Has access to only state and event parameter.
     // Any valid javascript should work
-    return Object.keys(event).every(eventName=>{
+    return Object.keys(events).every(eventName=>{
         typeof event[eventName] === "function";
     })
 }
