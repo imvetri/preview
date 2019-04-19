@@ -33,7 +33,6 @@ class DynamicComponent extends Component {
         let newElement = transpileJSX(this.markup, this.style, this.state, this.events);
         return (
             <div className={style.box}>
-                dei
                 {newElement}
                 {this.children.map(component=><DynamicComponent component={component}/>)}
             </div>

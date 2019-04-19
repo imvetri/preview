@@ -6,7 +6,6 @@ import React from "react";
 export function transpileJSX(markup, style, state, events) {
 
     // Create event+id global object from events
-    debugger;
     events.forEach(event => {
         let id = "ID"+event.id.split("ID")[1]
         if(markup.indexOf(id)==-1){
